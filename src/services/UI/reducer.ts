@@ -4,6 +4,11 @@ import { set } from 'lodash';
 
 const initialState: Record<any, any> = {
   refreshToken: true,
+  testOIbject: {
+    name: 'Nam',
+    age: 'loz',
+    bug: true
+  }
 };
 
 export const Slice = createSlice({
@@ -15,7 +20,8 @@ export const Slice = createSlice({
       const { path, result } = payload as { path: string, result: boolean };
       set(state, path, result);
     }).addCase(actions.setLoadingPage, (state, { payload }) => {
-      set(state, 'loadingApp', payload);
+      set(state, 'refreshToken', payload);
+      set(state, 'testOIbject.bug', payload);
     });
   },
 });

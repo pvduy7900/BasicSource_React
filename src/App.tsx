@@ -7,9 +7,6 @@ import store from 'store';
 const AppLayout: React.FC = () => <RootScreens />;
 
 const App: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Booking';
-  }, []);
 
   return (
     <Provider store={store}>

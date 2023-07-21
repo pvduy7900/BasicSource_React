@@ -5,6 +5,7 @@ import { rootReducer, rootSaga } from './root';
 // disable thunk and add redux-saga middleware
 const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
+  devTools: true,
   reducer: rootReducer,
   middleware: getDefaultMiddleware => {
     return [...getDefaultMiddleware({ thunk: false }), sagaMiddleware];

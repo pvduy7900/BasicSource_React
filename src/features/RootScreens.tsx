@@ -11,7 +11,7 @@ const RootScreens = () => {
     <React.Fragment>
       <Routes>
         <Route path='/private' element={shield(PrivateLayout)}>
-
+          <Route path='booking' element={<BookingPage />} />
         </Route>
         <Route path='/' element={<BookingPage />} />
         <Route path='*' element={<NotFoundPage />} />
